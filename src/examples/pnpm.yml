@@ -9,6 +9,6 @@ usage:
     use-my-orb:
       jobs:
         - cypress/run:
-            package-manager: "pnpm"
-            start-command: "pnpm start"
-            install-command: "pnpm install --frozen-lockfile"
+            package_manager: "pnpm"
+            start_command: "pnpm start"
+            install_command: "pnpm install --frozen-lockfile"

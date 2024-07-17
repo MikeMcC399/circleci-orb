@@ -1,0 +1,12 @@
+description: >
+  Runs Cypress tests after waiting for the local server to start using the wait_on package (https://github.com/jeffbski/wait_on).
+usage:
+  version: 2.1
+  orbs:
+    cypress: cypress-io/cypress@3
+  workflows:
+    use-my-orb:
+      jobs:
+        - cypress/run:
+            start_command: "npm start"
+            cypress_command: "npx wait_on@latest http://localhost:8080 && npx cypress run"

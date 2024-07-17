@@ -5,18 +5,18 @@ usage:
   orbs:
     cypress: cypress-io/cypress@3
 jobs:
-  run-cypress-in-specified-node-version:
+  run-cypress-in-specified-node_version:
     executor:
       name: cypress/default
-      node-version: "20.6"
+      node_version: "20.6"
     steps:
       - cypress/install:
-          package-manager: "yarn"
-      - cypress/run-tests:
-          start-command: "npm run start:dev"
-          cypress-command: "npx cypress run"
+          package_manager: "yarn"
+      - cypress/run_tests:
+          start_command: "npm run start:dev"
+          cypress_command: "npx cypress run"
 workflows:
   use-my-orb:
     jobs:
-      - run-cypress-in-specified-node-version:
+      - run-cypress-in-specified-node_version:
           name: Run Cypress in Node 20
